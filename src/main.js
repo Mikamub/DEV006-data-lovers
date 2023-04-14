@@ -48,22 +48,35 @@ document.getElementById("botonInicioPociones").addEventListener('click', functio
   });
 });
 
-const infoDataLibro = document.createElement("p");// Crear una costante que crea un parrafo para la data libro
-infoDataLibro.classList.add("info-libro");// Para darle una clase de estilo llamada info-libroal parrafo que se esta creando para mostar la data detras de la imagen
+const infoDataLibro = document.createElement("p");
+infoDataLibro.classList.add("info-libro");
 
-document.querySelectorAll(".libroPortada").forEach(function(libro) { //para seleccionar todos los elementos en el documento con la clase "libroPortada" y agregarles dos event listeners.
-  libro.addEventListener('mouseover', function () { //Event listener se dispara cuando el cursor se coloca sobre la imagen del libro y el segundo cuando se mueve el cursor fuera de la imagen.
-    const valor = libro.getAttribute('value'); // Constante para obtener el atributo de value de los libros
-    const titulo = data.books[valor].title;// Constante titulo que llama el value de la data de libro 
-    const fechaLanzamiento = data.books[valor].releaseDay;// Constante fechaLanzamiento que llama el value de la data de libro 
-    const autor = data.books[valor].author; // Constante autor que llama el value de la data de libro 
-    const descripcion = data.books[valor].description;// Constante descripction que llama el value de la data de libro 
+document.querySelectorAll(".libroPortada").forEach(function(libro) {
+  libro.addEventListener('mouseover', function () {
+    const valor = libro.getAttribute('value');
+    const titulo = data.books[valor].title;
+    const fechaLanzamiento = data.books[valor].releaseDay;
+    const autor = data.books[valor].author;
+    const descripcion = data.books[valor].description;
 
-    infoDataLibro.innerText = "Libro: " + titulo + "\n" + "Día de lanzamiento: " + fechaLanzamiento + "\n" + "Autor: " + autor + "\n" + "Descripción: " + descripcion;// Info data libro que muestre el titulo más la fecha en la pag
-    libro.appendChild(infoDataLibro);// Donde esta ubicado el libro se agrege la info de data libro
+    infoDataLibro.innerText = "Libro: " + titulo + "\n" + "Día de lanzamiento: " + fechaLanzamiento + "\n" + "Autor: " + autor + "\n" + "Descripción: " + descripcion;
+    libro.appendChild(infoDataLibro);
+
+    // Agregar la clase 'girar' a la imagen
+    libro.querySelector('img').classList.add('rotar');
   });
 
-  libro.addEventListener('mouseleave', function () { // Esto muestra la información del libro debajo de su imagen.
-    libro.removeChild(infoDataLibro); //para quitar el párrafo que muestra la información del libro de debajo de la imagen.
+  libro.addEventListener('mouseleave', function () {
+    // Eliminar el párrafo de información del libro
+    libro.removeChild(infoDataLibro);
+
+    // Esperar a que se complete la transición y luego agregar la clase 'mostrar-info'
+    libro.querySelector('img').addEventListener('transitionend', function() {
+      libro.querySelector('img').classList.remove('rotar');
+      libro.classList.remove('mostrar-info');
+    }, {once: true});
+
+    // Agregar la clase 'mostrar-info' a la capa contenedora del libro
+    libro.classList.add('mostrar-info');
   });
 });
