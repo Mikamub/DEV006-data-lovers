@@ -7,7 +7,7 @@ import data from './data/harrypotter/data.js';
 // Funcionalidad para el boton de inicio
 document.getElementById("botonInicioHP").addEventListener('click', function () { //aqui se llama el id del boton
   window.scrollTo({ // atributo de mover por la pagina
-    top: 0, //aqui se le indica que tiene que moverse verticalmete hasta el punto 0/inicio
+    top: document.getElementById("botonInicioHP").offsetTop, //aqui se le indica que tiene que moverse verticalmete hasta el punto 0/inicio
     behavior: "smooth"//forma en que se mueve, en este caso es lento tambien esta instantaneo "instant"
   });
 });
@@ -46,6 +46,12 @@ document.getElementById("botonInicioPociones").addEventListener('click', functio
     top: document.getElementById("PORDEFINIR").offsetTop, //aqui se le indica que tiene que moverse verticalmete hasta el id-div tambien puede ser query.selector
     behavior: "smooth" //forma en que se mueve, en este caso es lento tambien esta instantaneo "instant"
   });
+});
+const botonHamburguesa = document.getElementById("botonHamburguesa");
+const flexbox = document.querySelector(".flexbox");
+
+botonHamburguesa.addEventListener("click", () => {
+  flexbox.classList.toggle("oculto");
 });
 
 const infoDataLibro = document.createElement("p");
