@@ -114,7 +114,7 @@ body {
   background-color: #052D51;
   border-radius: 1vw;
   position: relative;
-  top: -2vw;
+  top: 0.5vw;
   cursor: pointer;
   /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
   margin: 0vw 6vw 0vw 6vw;
@@ -138,8 +138,6 @@ body {
   justify-content: center;
   margin-top: 0vw;
 }
-
-
 
 /*--------- Fondo de la pag de bienvenida ---------*/
 .fondoInicial {
