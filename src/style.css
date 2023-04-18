@@ -6,10 +6,17 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-
+.navbar-close {
+  display: flex;
+}
 
 /* Estilos para el menú desplegable en pantallas pequeñas */
 @media (max-width: 768px) {
+
+  .navbar-close {
+    display: flex;
+    display: none;
+  }
 
   /* Selector para los botones del otro header dentro del media query */
   .contenedorBoton .botonInicioLibros,
@@ -17,41 +24,16 @@ body {
   .contenedorBoton .botonInicioPersonajes,
   .contenedorBoton .botonInicioHechizos,
   .contenedorBoton .botonInicioPociones {
-    display: none;
+    display: block;
     /* Hace que los botones desaparezcan en pantallas pequeñas */
-  }
-
-  .flexbox oculto .botonInicioLibroscelu,
-  .flexbox oculto .botonInicioCasascelu,
-  .flexbox oculto .botonInicioPersonajescelu,
-  .flexbox oculto .botonInicioHechizoscelu,
-  .flexbox oculto .botonInicioPocionescelu {
-    font-family: 'Harry Potter', sans-serif;
-    border: none;
-    font-size: 1.5vw;
-    height: 3vw;
-    width: 13vw;
-    line-height: 4vw;
-    color: rgb(175, 167, 88);
-    background-color: #052D51;
-    border-radius: 1vw;
-    position: relative;
-    top: -4vw;
-    cursor: pointer;
-    /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
-    margin: 0vw 6vw 0vw 6vw;
-  }
-
-  .flexbox.oculto {
-    top: 80px;
   }
 
   /* Estilos para el menú hamburguesa */
   .botonHamburguesa {
     display: block;
     margin: 0 10px;
-    border: none;
-    background-color: transparent;
+    border: 1px;
+    background-color: #052D51;
     cursor: pointer;
   }
 
@@ -65,38 +47,14 @@ body {
     transition: all 0.3s ease-in-out;
   }
 
-  /* Estilos para el menú desplegable */
-  /* .oculto {
-    display: none;
-  } */
-
-  .flexbox.oculto {
+  .flexbox {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(5, 46, 81, 0.67);
-    width: 30%;
-    text-align: center;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 10px;
+    justify-content: center;
+    margin-top: 0VW;
   }
 
-  .flexbox.oculto button {
-    margin: 10px 0;
-  }
 }
 
-.flexbox oculto .botonInicioLibroscelu,
-.flexbox oculto .botonInicioCasascelu,
-.flexbox oculto .botonInicioPersonajescelu,
-.flexbox oculto .botonInicioHechizoscelu,
-.flexbox oculto .botonInicioPocionescelu {
-  display: none;
-}
 
 /*--------- contenedor del boton  ---------*/
 .contenedorBoton {
@@ -150,12 +108,13 @@ body {
   font-size: 1.5vw;
   height: 3vw;
   width: 13vw;
+  /*interlineado*/
   line-height: 4vw;
   color: rgb(175, 167, 88);
   background-color: #052D51;
   border-radius: 1vw;
   position: relative;
-  top: -4vw;
+  top: 2.5vw;
   cursor: pointer;
   /*primero: superior, segundo: derecha, tercero: inferior, cuarto: izquierdo*/
   margin: 0vw 6vw 0vw 6vw;
@@ -283,4 +242,9 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+.navbar-open {
+  display: flex;
+  flex-direction: column;
 }

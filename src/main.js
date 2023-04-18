@@ -48,11 +48,14 @@ document.getElementById("botonInicioPociones").addEventListener('click', functio
   });
 });
 const botonHamburguesa = document.getElementById("botonHamburguesa");
-const flexbox = document.querySelector(".flexbox");
+const contenedorBoton = document.getElementById("navbar");
+// const flexbox = document.querySelector(".flexbox");
 
 botonHamburguesa.addEventListener("click", () => {
-  flexbox.classList.toggle("oculto");
+  contenedorBoton.classList.toggle("navbar-open");
+  // flexbox.classList.toggle("oculto");
 });
+
 
 const infoDataLibro = document.createElement("p");
 infoDataLibro.classList.add("info-libro");
