@@ -1,3 +1,22 @@
+# "WikiPotter"
+
+## Índice
+
+- [1. Descripcion del Proyecto](#descripcion-del-proyecto)
+- [2. Diseño centrado en el usuario](#diseño-centrado-en-el-usuario)
+- [3. Diseño de la página web](#diseño-de-la-página-web)
+- [4. Prototipos](#prototipos)
+- [5. Bienvenida](#bienvenidabienvenidabienvenida)
+- [6. Libros](#libros)
+- [7. Personajes](#personajes)
+- [8. Hechizos](#hechizos)
+- [9. Pociones](#libros)
+- [10.Resumen](#resumen)
+
+## Descripcion del Proyecto:
+
+- Es una página web basada en la temática de Harry Potter, en la que se encuentra informacion y datos relevantes de la Saga de Harry Potter
+
 ## Diseño centrado en el usuario:
 
 - Se utilizó un proceso de diseño centrado en el usuario.
@@ -8,6 +27,13 @@
 
 - La página web tiene un diseño intuitivo y responsivo que permite a los usuarios navegar fácilmente y encontrar la información que están buscando en cualquier dispositivo.
 - El menú en la parte superior de la página es fijo, lo que significa que los usuarios pueden acceder a los distintos botones en cualquier momento sin tener que desplazarse hacia arriba o hacia abajo en la página.
+
+## Prototipos
+
+A continuación, se muestran los enlaces a los prototipos creados en Figma:
+
+- Prototipo de Baja Fidelidad: https://www.figma.com/file/4Jk169XCG8RyWXoBmox3AG/Data-lovers-baj?type=design&node-id=0-1&mode=design&t=KDcQvVSWHuAe8rf7-0
+- Prototipo de Alta Fidelidad: https://www.figma.com/file/kl5SCPp0g9pGUe9INvDryS/Prototipo-de-alta?type=design&mode=design&t=KDcQvVSWHuAe8rf7-0
 
 ## Bienvenida:
 
@@ -21,7 +47,7 @@ En la página de inicio, los usuarios son recibidos con una bienvenida que los i
 ## Personajes:
 
 - Wikipottter proporciona información detallada sobre los personajes principales de la saga.
-Incluye información como su nombre, fecha de cumpleaños, estado vital (vivo o muerto), género, patronus, casa y ancestro.
+  Incluye información como su nombre, fecha de cumpleaños, estado vital (vivo o muerto), género, patronus, casa y ancestro.
 - Los usuarios pueden filtrar los personajes por apellido, género, especie y casa.
 
 ## Hechizos:
